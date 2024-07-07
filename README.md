@@ -33,9 +33,11 @@ This is the constructor function, which is executed only once when the contract 
         require(msg.sender == account_holder,"Unauthorized access: You are not the owner of the account");
         _;
     }
+    
 This defines a modifier named onlyaccount_holder that checks if the caller (msg.sender) is the account_holder. If not, it throws an error "Unauthorized access: You are not the owner of the account". The _ placeholder represents where the modified function's code will be executed.
 
 //Creatd a mint function
+
     function mint(address to, uint256 amount) external onlyaccount_holder{
         _mint(to, amount);
     }
@@ -51,7 +53,9 @@ This function allows the owner to mint new tokens. It takes two parameters: to (
     }
     
 This function allows a user to redeem tokens. It takes one parameter, amount (the number of tokens to redeem). It checks if the caller has enough balance and transfers the tokens from the caller to the account_holder. The _burn function is commented out, meaning it is not used.
+
 //create a function named as burn
+
     function burn(uint256 amount) external {
         _burn(msg.sender, amount);
     }
