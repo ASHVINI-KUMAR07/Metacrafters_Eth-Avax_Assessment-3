@@ -65,7 +65,7 @@ This function allows any user to burn (destroy) their tokens. It takes one param
 //this function will transfer token
 
     function transferToken(address _reciever , uint256 amount) external {
-        require(balanceOf(msg.sender) >= amount , "You don't have enough degen tokens to transfer");
+        require(balanceOf(msg.sender) >= amount , "You don't have enough tokens to transfer");
         approve(msg.sender, amount);
         transferFrom(msg.sender , _reciever , amount);
     }
