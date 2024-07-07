@@ -34,31 +34,38 @@ This is the constructor function, which is executed only once when the contract 
         _;
     }
 This defines a modifier named onlyaccount_holder that checks if the caller (msg.sender) is the account_holder. If not, it throws an error "Unauthorized access: You are not the owner of the account". The _ placeholder represents where the modified function's code will be executed.
+
 //Creatd a mint function
     function mint(address to, uint256 amount) external onlyaccount_holder{
         _mint(to, amount);
     }
+    
 This function allows the owner to mint new tokens. It takes two parameters: to (the address to receive the tokens) and amount (the number of tokens to mint). It uses the _mint function from the ERC20 contract. The onlyaccount_holder modifier restricts its usage to the owner only.
 
 //created a reedem function
+
     function redeem(uint256 amount) external {
         //_burn(msg.sender, amount);
         require(balanceOf(msg.sender) >= amount, "Funds unavailable for withdrawal.");
         _transfer(msg.sender, account_holder, amount);
     }
+    
 This function allows a user to redeem tokens. It takes one parameter, amount (the number of tokens to redeem). It checks if the caller has enough balance and transfers the tokens from the caller to the account_holder. The _burn function is commented out, meaning it is not used.
 //create a function named as burn
     function burn(uint256 amount) external {
         _burn(msg.sender, amount);
     }
+    
 This function allows any user to burn (destroy) their tokens. It takes one parameter, amount (the number of tokens to burn). It uses the _burn function from the ERC20 contract.
 
 //this function will transfer token
+
     function transferToken(address _reciever , uint256 amount) external {
         require(balanceOf(msg.sender) >= amount , "You don't have enough degen tokens to transfer");
         approve(msg.sender, amount);
         transferFrom(msg.sender , _reciever , amount);
     }
+    
 This function allows a user to transfer tokens to another address. It takes two parameters: _reciever (the address to receive the tokens) and amount (the number of tokens to transfer). It checks if the caller has enough balance, approves the transfer, and then transfers the tokens using the transferFrom function.
 
     function getBalance() external view returns(uint256) {
