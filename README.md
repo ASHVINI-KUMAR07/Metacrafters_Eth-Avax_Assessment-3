@@ -1,6 +1,11 @@
-# SPECTACULAR'S TOKEN USING ERC20 BY OPENZEPPLIN challenge_intermediate-3
+# SPECTACULAR'S TOKEN USING ERC20 BY OPENZEPPLIN challenge_intermediate-4
 This smart contract depicts about use of ERC 20.
 
+# Getting Started
+Fully Tested and Executed on Fuji Testnet
+<img width="1079" alt="transfer" src="https://github.com/ASHVINI-KUMAR07/challenge_intermediate-3/assets/149240098/e343c582-fe08-4ff0-94fd-aca6b2145b3e">
+
+Link: https://testnet.snowtrace.io/tokentxns
 # Description
 My task is to create a ERC20 token and deploy it on the Avalanche network for Degen Gaming. The smart contract should have the following functionality:
 
