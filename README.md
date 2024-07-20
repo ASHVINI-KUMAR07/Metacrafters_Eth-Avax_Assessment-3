@@ -3,7 +3,7 @@ This smart contract depicts about use of ERC 20.
 
 # Getting Started
 Fully Tested and Executed on Fuji Testnet
-<img width="1079" alt="transfer" src="https://github.com/ASHVINI-KUMAR07/challenge_intermediate-3/assets/149240098/e343c582-fe08-4ff0-94fd-aca6b2145b3e">
+<img width="1079" alt="transfer" src="https://github.com/ASHVINI-KUMAR07/challenge_intermediate-3/assets/149240098/e343c582-fe08-4ff0-94fd-aca6b2145b3e"> Refer this screenshot for the same
 
 Link: https://testnet.snowtrace.io/tokentxns
 # Description
