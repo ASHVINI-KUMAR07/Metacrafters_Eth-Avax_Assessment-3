@@ -14,7 +14,7 @@ contract Spectacular_Token is ERC20 {
         require(msg.sender == account_holder,"Unauthorized access: You are not the owner of the account");
         _;
     }
-//Creatd a mint function
+//Created a mint function
     function mint(address to, uint256 amount) external onlyaccount_holder{
         _mint(to, amount);
     }
